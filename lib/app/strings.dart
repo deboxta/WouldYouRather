@@ -1,0 +1,1 @@
+//TODO : Créer la classe "Strings" pour contenir les chaines de caractères de l'application.
