@@ -12,10 +12,10 @@ class LearningWidget extends StatelessWidget {
         itemCount: Config.graphemes.length,
         itemBuilder: (_, i) {
           return Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 8.0),
-            child: RaisedButton(
-                /*onPressed: onPressed,*/
-                color: Colors.white,
+            padding: const EdgeInsets.all(4.0),
+            child: Card(
+              child: Container(
+                  /*onPressed: onPressed,*/
                 child: Column(
                   children: <Widget>[
                     Text(
@@ -28,6 +28,7 @@ class LearningWidget extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
             ),
           );
         },

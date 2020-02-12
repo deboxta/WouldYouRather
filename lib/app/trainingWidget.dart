@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class TrainingWidget extends StatefulWidget {
   TrainingWidget({Key key}) : super(key : key);
@@ -10,24 +11,40 @@ class TrainingWidget extends StatefulWidget {
 
 class _TrainingWidget extends State<TrainingWidget> with AutomaticKeepAliveClientMixin<TrainingWidget> {
 
+  var rng = new Random();
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Container(
-          padding: const EdgeInsets.all(8),
+        Card(
           child: const Text(
               'Lo',
               textScaleFactor: 9.0)
         ),
-        RaisedButton(child: Text("ahahah"),),
-        RaisedButton(child: Text("eheheh"),),
-        RaisedButton(child: Text("ohohoh"),)
+        OutlineButton(
+          child: Text("ahahah"),
+          onPressed: _onChoiceClicked,
+        ),
+        OutlineButton(
+          child: Text("eheheh"),
+          onPressed: _onChoiceClicked,
+        ),
+        OutlineButton(
+          child: Text("ohohoh"),
+          onPressed: _onChoiceClicked,
+        )
 
       ],
       mainAxisAlignment:  MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
     );
+  }
+
+  void _onChoiceClicked(){
+    setState(() {
+
+    });
   }
 
   @override

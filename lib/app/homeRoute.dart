@@ -2,6 +2,7 @@ import 'package:tp3/app/trainingWidget.dart';
 import 'learningWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:tp3/app/durations.dart';
+import 'strings.dart';
 
 class HomeRoute extends StatefulWidget{
   @override
@@ -32,20 +33,22 @@ class _HomeRouteState extends State<HomeRoute> {
 
   @override
   Widget build(BuildContext context) {
+    final strings = Strings.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hiraganas"),
+        title: Text(strings.title),
       ),
       body: _buildBody(context),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
-            title: Text('Learn'),
+            //title: Text(strings.learn),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.create),
-            title: Text('Train'),
+            //title: Text(strings.train),
           ),
         ],
         currentIndex: _selectedIndex,
