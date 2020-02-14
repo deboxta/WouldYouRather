@@ -1,4 +1,4 @@
-import 'graphemeModel.dart';
+import '../models/graphemeModel.dart';
 
 class Config {
   static const List<GraphemeModel> graphemes = [

@@ -1,8 +1,8 @@
-import 'package:tp3/app/trainingWidget.dart';
-import 'learningWidget.dart';
+import 'package:tp3/app/trainingPage.dart';
+import 'learningPage.dart';
 import 'package:flutter/material.dart';
-import 'package:tp3/app/durations.dart';
-import 'strings.dart';
+import 'package:tp3/app/ressources/durations.dart';
+import 'ressources/strings.dart';
 
 class HomeRoute extends StatefulWidget{
   @override
@@ -41,14 +41,14 @@ class _HomeRouteState extends State<HomeRoute> {
       ),
       body: _buildBody(context),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
-            //title: Text(strings.learn),
+            title: Text(strings.learn),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.create),
-            //title: Text(strings.train),
+            title: Text(strings.train),
           ),
         ],
         currentIndex: _selectedIndex,
@@ -64,8 +64,8 @@ class _HomeRouteState extends State<HomeRoute> {
       controller: _pageController,
       onPageChanged: _pageChanged,
       children: <Widget>[
-        LearningWidget(key : PageStorageKey(_page1Key)),
-        TrainingWidget(key : PageStorageKey(_page2Key))
+        LearningPage(key : PageStorageKey(_page1Key)),
+        TrainingPage(key : PageStorageKey(_page2Key))
       ],
     );
   }
