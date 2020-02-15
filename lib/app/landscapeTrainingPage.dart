@@ -6,10 +6,12 @@ import 'package:tp3/app/widgets/outlineButtonWidget.dart';
 class LandscapeTrainingPage extends StatelessWidget{
   final Function() onPressed;
   final LearnModel model;
+  final bool isButtonEnabled;
 
   const LandscapeTrainingPage({
     Key key,
     @required
+    this.isButtonEnabled,
     this.model,
     this.onPressed,
   }) : super(key: key);
@@ -20,13 +22,13 @@ class LandscapeTrainingPage extends StatelessWidget{
       children: <Widget>[
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(7.0),
+            padding: const EdgeInsets.all(8.0),
             child: Card(
               elevation: 2.0,
               child: Center(
                 child: Text(
-                  "Lo",
-                  textScaleFactor: 9.0,
+                  model.choice0.symbol,
+                  textScaleFactor: 8.0,
                 ),
               ),
             ),
@@ -39,15 +41,18 @@ class LandscapeTrainingPage extends StatelessWidget{
             children: <Widget>[
               OutlineButtonWidget(
                   text: "ahahah",
+                  isEnable: false,
                   onPressed: onPressed
               ),
 
               OutlineButtonWidget(
                 text: "eheheh",
+                isEnable: true,
                 onPressed: onPressed,
               ),
               OutlineButtonWidget(
                 text: "ohohoh",
+                isEnable: true,
                 onPressed: onPressed,
               )
             ],

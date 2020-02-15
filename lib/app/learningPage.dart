@@ -17,9 +17,9 @@ class LearningPage extends StatelessWidget {
                 padding: const EdgeInsets.all(2.0),
                 child: Card(
                   elevation: 2.0,
-                  child: Center(
-                    /*onPressed: onPressed,*/
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Text(
                           "${Config.graphemes[i].symbol}",
@@ -31,7 +31,6 @@ class LearningPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
                 ),
               );
             },

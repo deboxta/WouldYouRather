@@ -1,14 +1,12 @@
 import 'package:tp3/app/models/graphemeModel.dart';
 
 class LearnModel {
-  final GraphemeModel response;
-  final GraphemeModel choice1;
-  final GraphemeModel choice2;
+  final GraphemeModel choice0;
+  final int id;
 
 
   const LearnModel({
-    this.response,
-    this.choice1,
-    this.choice2
+    this.id,
+    this.choice0,
   });
 }

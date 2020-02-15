@@ -8,11 +8,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //Langues supportées
       supportedLocales: Strings.values.keys.map((it) => Locale(it)),
-      //Fournisseurs (appellés delegates par le framework)
       localizationsDelegates: [
-        //Le votre doit être en premier
         AppLocalizationsDelegate.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,

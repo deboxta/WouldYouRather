@@ -7,10 +7,12 @@ import 'models/learnModel.dart';
 class PortraitTrainingPage extends StatelessWidget{
   final Function() onPressed;
   final LearnModel model;
+  final bool isButtonEnabled;
 
   const PortraitTrainingPage({
     Key key,
     @required
+    this.isButtonEnabled,
     this.model,
     this.onPressed,
   }) : super(key: key);
@@ -21,13 +23,13 @@ class PortraitTrainingPage extends StatelessWidget{
       children: <Widget>[
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(7.0),
+            padding: const EdgeInsets.all(8.0),
             child: Card(
               elevation: 2.0,
               child: Center(
                 child: Text(
-                  "Lo",
-                  textScaleFactor: 9.0,
+                  model.choice0.symbol,
+                  textScaleFactor: 16.0,
                 ),
               ),
             ),
@@ -35,18 +37,22 @@ class PortraitTrainingPage extends StatelessWidget{
         ),
         OutlineButtonWidget(
             text: "ahahah",
+            isEnable: isButtonEnabled,
             onPressed: onPressed
         ),
 
         OutlineButtonWidget(
           text: "eheheh",
+          isEnable: isButtonEnabled,
           onPressed: onPressed,
         ),
         OutlineButtonWidget(
           text: "ohohoh",
+          isEnable: isButtonEnabled,
           onPressed: onPressed,
         )
       ],
+      mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
     );
