@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
-import 'learningWidget.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tp3/app/ressources/strings.dart';
+import 'homeRoute.dart';
 
 class App extends StatelessWidget {
-  static const String _hiraganas = 'Hiraganas';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      onGenerateTitle: (BuildContext context) => "Hiraganas",
-      title: _hiraganas,
-      home: LearningWidget(),
+      supportedLocales: Strings.values.keys.map((it) => Locale(it)),
+      localizationsDelegates: [
+        AppLocalizationsDelegate.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      onGenerateTitle: (BuildContext context) =>  Strings.of(context).title,
+        theme: new ThemeData(scaffoldBackgroundColor: const Color(0xFFEFEFEF)),
+      home: HomeRoute(),
     );
   }
 }
+

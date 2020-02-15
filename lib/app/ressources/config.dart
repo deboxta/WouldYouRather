@@ -1,3 +1,5 @@
+import '../models/graphemeModel.dart';
+
 class Config {
   static const List<GraphemeModel> graphemes = [
     //TODO : Créer la classe "GraphemeModel" (ou équivalent si vous n'aimez pas son nom).
