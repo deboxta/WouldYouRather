@@ -2,6 +2,7 @@ import '../models/graphemeModel.dart';
 
 class Config {
   static const List<GraphemeModel> graphemes = [
+    //BC : TODO : Enlever ce TODO.
     //TODO : Créer la classe "GraphemeModel" (ou équivalent si vous n'aimez pas son nom).
     /* - */
     GraphemeModel(symbol: "ん", translation: "n"),
@@ -61,5 +62,6 @@ class Config {
     GraphemeModel(symbol: "を", translation: "wo"),
   ];
 
+  //BC : Code mort. Je suis bien curieux de voir ce que tu as fait à la place...
   static const int trainNbChoices = 3;
 }

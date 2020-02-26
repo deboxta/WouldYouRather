@@ -13,6 +13,7 @@ class LearningPage extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: orientation == Orientation.portrait ? 2 : 3),
             itemCount: Config.graphemes.length,
             itemBuilder: (_, i) {
+              //BC : Manque un Widget pour cette carte.
               return Padding(
                 padding: const EdgeInsets.all(2.0),
                 child: Card(

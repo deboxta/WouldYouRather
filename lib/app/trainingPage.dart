@@ -13,16 +13,20 @@ class TrainingPage extends StatefulWidget {
 
 class _TrainingPage extends State<TrainingPage> with AutomaticKeepAliveClientMixin<TrainingPage> {
   Random _rng = new Random();
+  //BC : Logique applicative ne devrait pas être dans les Widgets.
+  //BC : Private manquqant.
   int responseId;
   List<GraphemeModel> _graphemes = List<GraphemeModel>();
   List<bool> _isEnabled = [true,true,true];
 
   void _getRandomGraphemes(){
     _graphemes.clear();
+    //BC : Constante manquante.
     for(var i=0; i<3; i++){
       _graphemes.add(Config.graphemes[_rng.nextInt(Config.graphemes.length)]);
       _isEnabled[i] = true;
     }
+    //BC : Constante manquante.
     responseId = _rng.nextInt(3);
   }
 
@@ -34,6 +38,7 @@ class _TrainingPage extends State<TrainingPage> with AutomaticKeepAliveClientMix
     }
   }
 
+  //BC : Warning ignoré.
   @override
   Widget build(BuildContext context) {
     return OrientationBuilder(
@@ -60,6 +65,7 @@ class _TrainingPage extends State<TrainingPage> with AutomaticKeepAliveClientMix
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
+                    //BC : Manque une boucle ici.
                     outlineButtonWidget(0),
                     outlineButtonWidget(1),
                     outlineButtonWidget(2)
@@ -85,6 +91,7 @@ class _TrainingPage extends State<TrainingPage> with AutomaticKeepAliveClientMix
                   ),
                 ),
               ),
+              //BC : Manque une boucle ici.
               outlineButtonWidget(0),
               outlineButtonWidget(1),
               outlineButtonWidget(2)

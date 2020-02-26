@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+//BC : Code mort.
 class OutlineButtonWidget extends StatefulWidget{
     final String text;
     final Function() onPressed;

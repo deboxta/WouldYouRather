@@ -4,6 +4,7 @@ import 'package:tp3/app/widgets/outlineButtonWidget.dart';
 
 import 'models/learnModel.dart';
 
+//BC : Code mort.
 class PortraitTrainingPage extends StatelessWidget{
   final Function() onPressed;
   final LearnModel model;

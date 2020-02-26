@@ -13,6 +13,7 @@ class _HomeRouteState extends State<HomeRoute> {
   final _pageController = PageController(
     initialPage: 0,
   );
+  //BR : Pourquoi il y a t-il des constantes en plein milieux d'attributs ?
   static const String _page1Key = "LearningPageKey";
   static const String _page2Key = "TrainingPageKey";
 

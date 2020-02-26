@@ -15,6 +15,8 @@ class App extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
       ],
       onGenerateTitle: (BuildContext context) =>  Strings.of(context).title,
+        //BR : Couleur aurait du, selon moi, être dans une constante.
+      //BC : Formatage.
         theme: new ThemeData(scaffoldBackgroundColor: const Color(0xFFEFEFEF)),
       home: HomeRoute(),
     );

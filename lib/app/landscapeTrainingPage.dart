@@ -3,6 +3,7 @@ import 'package:tp3/app/models/graphemeModel.dart';
 import 'package:tp3/app/models/learnModel.dart';
 import 'package:tp3/app/widgets/outlineButtonWidget.dart';
 
+//BC : Code mort.
 class LandscapeTrainingPage extends StatelessWidget{
   final Function() onPressed;
   final LearnModel model;
