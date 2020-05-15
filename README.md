@@ -1,4 +1,4 @@
-# WouldYouRather
+# WouldYouRather_Flutter
 
 Application tp3 cours Mobile II 420-V41-SF 2020
 
